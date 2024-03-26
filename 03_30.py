@@ -1,5 +1,8 @@
-sum =0
-for i in range(1,101,1):
-    sum=sum+i
+x=float(input('type x: '))
+n=int(input('tupe n: '))
 
-print("sum = ",sum)
+prod=1
+for i in range(1,n+1):
+    prod=prod*x
+
+print(prod)
