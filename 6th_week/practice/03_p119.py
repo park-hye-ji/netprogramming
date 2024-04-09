@@ -1,6 +1,6 @@
-word = input()
+num = input("insert num")
 
-index=word.find('a')+1
-
-print(word[:index])
-print(word[index:])
+sum = 0
+for s in num :
+    sum +=int(s)
+    print(sum)
