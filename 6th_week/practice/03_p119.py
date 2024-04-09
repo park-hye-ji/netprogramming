@@ -1,12 +1,6 @@
-from random import randint
+word = input()
 
-money=50
-while(money>0 and money <100):
-    coin = randint(1,2)
-    answer = randint(1,2)
-    if (answer==coin):
-        money=money+9
-    else:
-        money=money-10
+index=word.find('a')+1
 
-    print(money)
+print(word[:index])
+print(word[index:])
