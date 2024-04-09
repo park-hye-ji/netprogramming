@@ -1,22 +1,9 @@
-a = int(input("insert num1: "))
-b = int(input("insert num2: "))
+list=[]
+list2=[]
 
-def gcd(a,b):
-    if a>b:
-        while(b!=0):
-            a,b=b,a%b
-        return a
-    elif a<b:
-        while(a!=0):
-            b,a=a,b%a
-        return b
-    
-print(gcd(a,b))
+for i in range(1,50):
+    list.append(i)
+    list2.append(i*i)
 
-
-
-
-
-
-
-        
+print(list)
+print(list2)
