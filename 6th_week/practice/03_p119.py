@@ -1,14 +1,12 @@
-list =[1,2,3]
+from random import randint
 
-list[1]=17
-print(list)
-list.extend([4,5,6])
-print(list)
-list.pop(0)
-print(list)
-list.sort()
-print(list)
-list.sort(reverse=True)
-print(list)
-list[3]=25
-print(list)
+money=50
+while(money>0 and money <100):
+    coin = randint(1,2)
+    answer = randint(1,2)
+    if (answer==coin):
+        money=money+9
+    else:
+        money=money-10
+
+    print(money)
