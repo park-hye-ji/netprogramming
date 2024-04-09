@@ -1,7 +1,14 @@
-friend = ["최현진","김지연","김지원"]
+list =[1,2,3]
 
-friend.insert(0,"김나현")
-friend.insert(2,"채한별")
-friend.append("박혜지")
-
-print(friend)
+list[1]=17
+print(list)
+list.extend([4,5,6])
+print(list)
+list.pop(0)
+print(list)
+list.sort()
+print(list)
+list.sort(reverse=True)
+print(list)
+list[3]=25
+print(list)
