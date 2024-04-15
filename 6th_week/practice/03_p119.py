@@ -1,21 +1,28 @@
-days = {'January':31, 'February':28, 'March':31, 'April':30,'May':31, 'June':30, 'July':31, 'August':31, 'September':30, 'October':31, 'November':30,'December':31}
+d = [{'name': 'Todd', 'phone': '555-1414', 'email': 'todd@mail.net'},
+    {'name': 'Helga', 'phone': '555-1618', 'email': 'helga@mail.net'},
+    {'name': 'Princess', 'phone': '555-3141', 'email': ''},
+    {'name': 'LJ', 'phone': '555-2718', 'email': 'lj@mail.net'}]
 
-month=input()
+print("전화번호가 8로 끝나는 사용자 이름: ")
+for person in d:
+    if person['phone'].endswith('8'):
+        print(person['name'])
 
-day=days.get(month)
-print(day)
+print("이메일이 없는 사용자: ")
+for person in d:
+    if not person['email']:
+        print(person['name'])
 
-print(sorted(days))
+def find_user(name):
+    for person in d:
+        if person['name'] == name:
+            return person['phone'], person['email']
+    return False
 
-for i in days:
-    day=days.get(i)
-    if day==31:
-        print(i)
+who = input("사용자 이름을 입력하세요: ")
+user = find_user(who)
 
-print(sorted(days.items(), key=lambda t: t[1]))
-
-word_3=input("input month for 3 word: ")
-for i in days:
-    day=days.get(i)
-    if word_3 in i:
-        print(i)
+if user:
+    print(f"전화번호: {user[0]}, 이메일: {user[1]}")
+else:
+    print("이름이 없습니다.")
